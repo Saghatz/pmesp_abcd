@@ -19,7 +19,7 @@ body {
     position: relative; /* Para permitir o posicionamento absoluto da logo */
 }
 
-.top-logo {
+.top-logo2 {
     position: absolute; /* Posiciona a logo no topo */
     top: 20px;
     right: 25px; /* Alinha a logo ao canto superior direito */
