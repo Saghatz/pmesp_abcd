@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polícia Militar - Modelo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <!-- Contêiner para a imagem no topo -->
+        <div class="top-container">
+            <img src="src/imgs/img_topo.png" alt="Imagem Topo" class="top-image">
+            
+            <!-- Logo no canto superior direito com link -->
+            <a href="https://discord.gg/ErgdfvxhvV" target="_blank">
+                <img src="src/logos/img_discord_topo.png" alt="Logo Discord" class="top-logo">
+            </a>
+        </div>
+   
+    
+        <!-- Conteúdo principal do cabeçalho -->
+        <div class="top-bar">
+            <div class="logo">
+                <img src="src/logos/logo_pmesp.png" alt="Logo Polícia Militar">
+                <div class="logo-text">
+                    <p>A FORÇA PÚBLICA DE SÃO PAULO</p>
+                    <p>Secretaria da Segurança Pública</p>
+                </div>
+            </div>
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="#Institucional">Institucional</a></li>
+                    <li><a href="#noticias">Notícias</a></li>
+                    <li><a href="#vídeos">Vídeos</a></li>
+                    <li><a href="https://saghatz.github.io/concursos_pmesp/">Concursos</a></li>
+                </ul>
+            </nav>            
+        </div>
+    </header>
+    
+    <!-- Banner Rotativo -->
+    <section class="banner-section">
+        <div class="line top-line"></div> <!-- Linha superior -->
+        
+    <!-- Setas de Navegação -->
+    <button class="banner-nav left" onclick="navigateBanner(-1)">&#9664;</button>
+    <button class="banner-nav right" onclick="navigateBanner(1)">&#9654;</button>
+
+    <div class="banner">
+        <div class="banner-container">
+            <img src="./src/img_cabecalho/img01.jpeg" alt="Banner 1">
+            <img src="./src/img_cabecalho/img02.jpeg" alt="Banner 2">
+            <img src="./src/img_cabecalho/img03.jpg" alt="Banner 3">
+        </div>
+    </div>
+
+    <div class="line bottom-line"></div> <!-- Linha inferior -->
+
+    </section>
+
+    <!-- Botões abaixo do banner -->
+    <div class="icon-buttons-container">
+        <div class="icon-buttons">
+            <button class="icon-button" onclick="openOuvidoria()">
+                <img src="src/imgs/icone01.png" alt="Ícone 1">
+                <p class="button-text"><b>Ouvidoria</b></p>
+            </button>
+            <button class="icon-button" onclick="openBoletim()">
+                <img src="src/imgs/icone02.png" alt="Ícone 2">
+                <p class="button-text"><b>Boletim de Ocorrência Eletrônico</b></p>
+            </button>
+            <button class="icon-button">
+                <img src="src/imgs/icone03.png" alt="Ícone 3">
+                <p class="button-text"><b>Orientações de Segurança</b></p>
+            </button>
+        </div>
+    </div>
+
+    <!-- Ultimas Noticias -->
+    <main>
+        <section id="noticias">
+            <div class="title-wrapper">
+                <h2 class="title">ÚLTIMAS NOTÍCIAS</h2>
+                <div class="red-line"></div>
+            </div>
+        </section>
+
+    <!-- Seção Últimas Notícias -->
+    <section id="ultimas-noticias">
+        <div class="image-container">
+            <!-- Imagem vertical -->
+            <div class="image-item vertical">
+                <img src="src/imgs/noticia_01.1.png" alt="Novo Uniforme PMESP">
+                <div class="image-text">
+                    <p class="title-noticias">Integração ao suporte militar</p>
+                    <p class="description">Novos fardamentos são integrados ao batalhão da PMESP.</p>
+                </div>
+            </div>
+
+            <!-- Imagens empilhadas -->
+            <div class="image-stack">
+                <div class="image-item">
+                    <img src="src/imgs/noticia_02.1.png" alt="Blitz UPA">
+                    <div class="image-text">
+                        <p class="title-noticias">Blitz do bem!</p>
+                        <p class="description">TOR promove blitz junto a UPA para concientização da comunidade.</p>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="src/imgs/noticia_03.1.png" alt="Rec EB">
+                    <div class="image-text">
+                        <p class="title-noticias">O EB Continua verde!</p>
+                        <p class="description">Recrutamento do Exército Brasileiro contou com uma quantidade significativa de novos recrutas.</p>
+                    </div>
+                </div>                             
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Vídeos em destaque -->
+    <main>
+        <section id="vídeos">
+            <div class="title-wrapper">
+                <h2 class="title">VÍDEOS EM DESTAQUE</h2>
+                <div class="red-line"></div>
+            </div>
+        </section>
+    
+    <!-- Seção Últimas Notícias -->
+    <section id="ultimas-noticias">
+        <div class="video-container">
+            <!-- Vídeo vertical (maior) -->
+            <div class="video-item vertical">
+                <!-- Iframe para o vídeo da esquerda -->
+                <iframe width="100%" height="510px" src="https://www.youtube.com/embed/c5BSc4rG5BM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <!-- Coluna à direita com vídeos empilhados -->
+            <div class="video-stack">
+                <div class="video-item">
+                    <iframe width="100%" height="250px" src="https://www.youtube.com/embed/ih2wHJDyjKM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-item">
+                    <iframe width="100%" height="250px" src="https://www.youtube.com/embed/XFW8FJUN8Tg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Container do formulário de Ouvidoria -->
+    <div id="ouvidoria-container" class="form-container">
+        <div class="form-content">
+            <!-- Logo -->
+            <img src="src/logos/logo_pmesp2.png" alt="Logo PMESP" class="logo-form">
+
+            <h2>Ouvidoria</h2>
+            <!-- Formulário de Ouvidoria -->
+            <form>
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required>
+
+                <label for="numero-contato">Número para Contato:</label>
+                <input type="text" id="numero-contato" name="numero-contato" required>
+
+                <label for="email">Email (ID Discord):</label>
+                <input type="text" id="email" name="email" required>
+
+                <label for="denuncia">Denúncia:</label>
+                <textarea id="denuncia" name="denuncia" required></textarea>
+
+                <!-- Botão de enviar -->
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Container do formulário de Boletim de Ocorrência -->
+    <div id="boletim-container" class="form-container">
+        <div class="form-content">
+            <!-- Logo -->
+            <img src="src/logos/logo_pmesp2.png" alt="Logo PMESP" class="logo-form">
+
+            <h2>Boletim de Ocorrência Eletrônico</h2>
+            <!-- Formulário de Boletim de Ocorrência -->
+            <form>
+                <label for="nome-bo">Nome Completo:</label>
+                <input type="text" id="nome-bo" name="nome-bo" required>
+
+                <label for="cpf-bo">CPF:</label>
+                <input type="text" id="cpf-bo" name="cpf-bo" required>
+
+                <label for="numero-contato-bo">Número para Contato:</label>
+                <input type="text" id="numero-contato-bo" name="numero-contato-bo" required>
+
+                <label for="email-bo">Email (ID Discord):</label>
+                <input type="text" id="email-bo" name="email-bo" required>
+
+                <label for="ocorrencia-bo">Descrição da Ocorrência:</label>
+                <textarea id="ocorrencia-bo" name="ocorrencia-bo" required></textarea>
+
+                <!-- Botão de enviar -->
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Polícia Militar do Estado de São Paulo. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

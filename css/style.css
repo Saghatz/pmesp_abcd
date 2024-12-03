@@ -1,0 +1,613 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Contêiner da imagem no topo */
+.top-container {
+    background-color: white; /* Fundo branco atrás da imagem */
+    display: flex;
+    justify-content: flex-start; /* Garante que a imagem esteja à esquerda */
+    position: relative; /* Para permitir o posicionamento absoluto da logo */
+}
+
+.top-logo {
+    position: absolute; /* Posiciona a logo no topo */
+    top: 20px;
+    right: 25px; /* Alinha a logo ao canto superior direito */
+    width: 50px; /* Ajuste o tamanho conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Alinhamento da imagem no topo */
+.top-image {
+    width: auto; /* Mantém o tamanho original da imagem */
+    height: auto; /* Mantém o tamanho original da imagem */
+    display: block; /* Remove margens automáticas */
+    margin-left: 0; /* Fixa a imagem na borda esquerda */
+    margin-right: 0; /* Garante que não haja espaço à direita */
+}
+
+/* Top Bar */
+header {
+    background-color: #333;
+    color: white;
+}
+
+header .top-bar {
+    display: flex;
+    justify-content: space-between; /* Garante que logo e menu fiquem em lados opostos */
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center; /* Alinha logo e texto verticalmente */
+}
+
+header .logo img {
+    width: 90px; /* Ajusta o tamanho da logo */
+}
+
+header .logo-text {
+    color: white;
+    text-align: center; /* Alinha o texto ao centro */
+    margin-left: 10px; /* Espaço entre o logo e o texto */
+    display: flex;
+    flex-direction: column; /* Empilha o conteúdo (texto) verticalmente */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+header .logo-text p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Menu Principal */
+header .main-menu {
+    display: flex;
+    margin-left: auto;
+    margin-top: 50px;
+    gap: 1rem; /* Adicionando espaçamento entre os itens do menu */
+}
+
+header .main-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+header .main-menu li {
+    position: relative; /* Necessário para adicionar a linha corretamente */
+}
+
+header .main-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 8px 0;
+}
+
+header .main-menu li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Centraliza a linha no meio do item */
+    right: -10px; /* Distância da linha à direita dos itens */
+    height: 50%; /* Altura da linha */
+    width: 2px; /* Largura da linha */
+    background-color: rgb(134, 124, 124); /* Linha branca */
+    transform: translateY(-50%); /* Ajusta a linha para realmente centralizar */
+}
+
+header .main-menu a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estiliza os títulos das seções */
+main h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.title-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    text-align: center; /* Centraliza o conteúdo */
+    gap: 10px; /* Espaçamento entre o título e a linha */
+}
+
+.red-line {
+    width: 50%; /* Ajuste de largura */
+    height: 4px; /* Altura da linha */
+    background-color: red; /* Cor da linha */
+    border-radius: 2px; /* Opcional: bordas arredondadas */
+}
+
+.title {
+    font-size: 30px;
+    color: #333;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.title-noticias {
+    font-size: 20px;
+    color: white;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.description {
+    font-size: 15px;
+    color: white;
+    text-align: left; /* Alinha a descrição à esquerda */
+}
+
+/* Linha vermelha */
+.red-line {
+    width: 150px;
+    height: 4px;
+    background-color: red;
+    border-radius: 2px;
+    margin: 10px auto; /* Aumente o valor de margin-top para mais espaçamento */
+}
+
+/* Seção Últimas Notícias */
+#ultimas-noticias {
+    text-align: center;
+}
+
+/* Contêiner das imagens */
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px; /* Espaço entre a linha e as imagens */
+}
+
+/* Imagem do uniforme na vertical */
+.image-item.vertical {
+    position: relative;
+}
+
+.image-item.vertical img {
+    width: 430px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+.image-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo transparente escuro */
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+}
+
+/* Contêiner das imagens empilhadas */
+.image-stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Cada item de imagem empilhada */
+.image-item {
+    position: relative;
+}
+
+.image-item img {
+    width: 470px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+.image-item .image-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo transparente escuro */
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+}
+
+/* Estilo para os parágrafos das seções */
+main p {
+    font-size: 1rem;
+    color: #555;
+    max-width: 800px;
+}
+
+.image-item {
+    position: relative;
+}
+
+.image {
+    width: 250px; /* Ajuste conforme necessário */
+    height: auto;
+    display: block;
+}
+
+.image-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo transparente escuro para melhorar a legibilidade */
+    padding: 5px;
+    font-weight: bold;
+}
+
+.image-item:first-child .image {
+    transform: rotate(90deg); /* Rotaciona a primeira imagem */
+}
+
+/* Estilos para o layout das imagens */
+.image-container .image-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Suaviza a transição ao navegar */
+    transform: translateX(0); /* Posição inicial */
+}
+
+.banner img {
+    width: 100%; /* Ajusta à largura total da página */
+    height: auto; /* Mantém as proporções originais */
+    flex: 0 0 auto; /* Evita cortes nas imagens */
+}
+
+/* Banner Section */
+.banner-section {
+    position: relative;
+    width: 100%;
+}
+
+.banner-container a {
+    display: inline-block; /* Certifique-se de que o link seja tratado como um elemento clicável */
+}
+
+.banner-container img:nth-of-type(2) {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* Linha vermelha abaixo do Banner */
+.line {
+    width: 100%;
+    height: 4px; /* Espessura da linha */
+    background-color: red;
+    margin-bottom: 0; /* Remove a margem abaixo da linha */
+}
+
+@keyframes slide {
+    0%, 25% { transform: translateX(0); }
+    33%, 58% { transform: translateX(-100%); }
+    66%, 91% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+/* Botões de Navegação no Banner */
+.banner-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5); /* Fundo transparente */
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    z-index: 10;
+}
+
+.banner-nav.left {
+    left: 10px;
+}
+
+.banner-nav.right {
+    right: 10px;
+}
+
+.banner-nav:hover {
+    background: rgba(0, 0, 0, 0.7); /* Destaque ao passar o mouse */
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+section {
+    margin-bottom: 0px;
+}
+
+section h2 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Contêiner dos Botões abaixo do Banner */
+.icon-buttons-container {
+    background-color: #333; /* Cor de fundo escuro */
+    padding: 10px;
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de largura igual */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+}
+
+/* Botões abaixo do Banner */
+.icon-buttons {
+    display: flex;
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    width: 100%; /* Garante que os botões ocupem toda a largura disponível */
+}
+
+/* Botões individuais */
+.icon-button {
+    background-color: transparent; /* Torna o fundo do botão invisível */
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Espaçamento interno para tornar os botões maiores */
+    flex-grow: 1; /* Faz com que cada botão ocupe o máximo de espaço possível */
+    border-right: 1px solid #ccc; /* Linha de separação entre os botões */
+}
+
+/* Remove a borda do último botão */
+.icon-buttons .icon-button:last-child {
+    border-right: none;
+}
+
+/* Tamanho dos ícones */
+.icon-button img {
+    width: 100px; /* Tamanho fixo dos ícones */
+    height: auto;
+}
+
+/* Centraliza o texto abaixo dos ícones */
+.icon-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-text {
+    margin-top: 8px;  /* Espaçamento entre o ícone e o texto */
+    color: white;     /* Cor do texto */
+    font-size: 14px;  /* Tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* VIDEOS */
+
+/* Container principal para os vídeos */
+.video-container {
+    display: flex;
+    gap: 10px; /* Espaço entre os vídeos */
+    justify-content: center; /* Alinha os vídeos ao centro da página */
+    width: 100%;
+}
+
+/* Vídeo à esquerda - maior */
+.video-item.vertical {
+    flex: 0 0 100%; /* Aumenta o tamanho do vídeo da esquerda para 70% da largura do container */
+    max-width: 100%; /* Garante que o vídeo não ultrapasse a área disponível */
+}
+
+.video-item.vertical video {
+    width: 100%;
+    height: auto;
+}
+
+/* Vídeos empilhados à direita */
+.video-item {
+    width: 100%; /* Garante que cada vídeo empilhado ocupe 100% da largura da coluna direita */
+    max-width: 100%; /* Não ultrapassa a largura do container */
+    max-height: 250px; /* Limita a altura do quadro dos vídeos empilhados */
+}
+
+.video-item video {
+    width: 100%;
+    height: auto;
+}
+
+.video-stack {
+    display: flex;
+    flex-direction: column; /* Empilha os vídeos por padrão */
+    gap: 10px; /* Espaço entre os vídeos empilhados */
+    flex: 0 0 70%; /* Largura fixa para telas maiores */
+    max-width: 100%; /* Garante que não ultrapasse a área disponível */
+    align-items: center; /* Centraliza os vídeos horizontalmente */
+    padding: 0 7px; /* Adiciona espaçamento nas bordas */
+}
+
+/* Responsividade para telas de até 992px */
+@media (max-width: 992px) {
+    .video-stack {
+        flex-direction: column; /* Continua empilhando os vídeos */
+        width: 100%; /* Garante que ocupe toda a largura */
+        align-items: stretch; /* Alinha os vídeos para ocupar 100% da largura */
+    }
+}
+
+/* Responsividade para telas de até 768px */
+@media (max-width: 768px) {
+    .video-stack {
+        gap: 8px; /* Ajusta o espaçamento para telas menores */
+        padding: 0 5px; /* Reduz o padding */
+    }
+}
+
+/* Responsividade para telas de até 576px */
+@media (max-width: 576px) {
+    .video-stack {
+        gap: 5px; /* Reduz ainda mais o espaçamento */
+        padding: 0 3px; /* Padding reduzido ao mínimo */
+    }
+}
+
+
+/* OUVIDORIA */
+
+/* Estilo para o container do formulário de Ouvidoria */
+.form-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay escuro */
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Estilos para o conteúdo do formulário */
+.form-content {
+    background-color: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    border-radius: 8px;
+}
+
+.form-content h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.form-content label {
+    display: block;
+    margin-top: 10px;
+}
+
+.form-content input, .form-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-content button {
+    background-color: #4caf75;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.form-content button:hover {
+    background-color: #45a049;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #333;
+}
+
+#ouvidoria-container {
+    display: none; /* Inicia oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Tela escura */
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.logo-form {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 70px;
+    height: auto;
+}
+
+/* Efeito de Fade-out apenas para o formulário */
+.fade-out-form {
+    opacity: 0;
+    visibility: hidden; /* Mantém o formulário invisível quando estiver fechado */
+    transition: opacity 0.5s ease-out;
+}
+
+/* Fundo escuro (overlay) que será ocultado também */
+.overlay {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-out;
+    pointer-events: none; /* Desabilita a interação com o overlay quando invisível */
+}
+
+/* Remove a borda quando o botão ou link é clicado */
+.icon-button:focus, button:focus, a:focus {
+    outline: none;
+}
