@@ -190,6 +190,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const cpf = document.querySelector("#cpf-bo").value;
         const numeroContato = document.querySelector("#numero-contato-bo").value;
         const email = document.querySelector("#email-bo").value;
+        const acusado = document.querySelector("#acusado-bo").value;
+        const vitima = document.querySelector("#vitima-bo").value;
+        const testemunha = document.querySelector("#testemunha-bo").value;
         const ocorrencia = document.querySelector("#ocorrencia-bo").value;
 
         const webhookURL = "https://discord.com/api/webhooks/1312890411777392793/znZhXrkXoP2JfopFFemAc4pA7md5G-5kTk8F-R1JKEpRIZRsGnCHGJTtkH958N4TBojP";
@@ -198,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const discordMention = `<@${email}>`; // Adiciona <@ e > ao redor do email
 
         const payload = {
-            content: `**Novo Boletim de Ocorrência Recebido**\n\n**Nome Completo:** ${nome}\n**CPF:** ${cpf}\n**Número de Contato:** ${numeroContato}\n**Email (ID Discord):** ${discordMention}\n**Descrição da Ocorrência:** ${ocorrencia}`
+            content: `**Novo Boletim de Ocorrência Recebido**\n\n**Nome Completo:** ${nome}\n**CPF:** ${cpf}\n**Número de Contato:** ${numeroContato}\n**Email (ID Discord):** ${discordMention}\n**Acusado:** ${acusado}\n**Vítima:** ${vitima}\n**Testemunha:** ${testemunha}\n**Descrição da Ocorrência:** ${ocorrencia}`
         };
 
         fetch(webhookURL, {
@@ -239,4 +242,29 @@ document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         closeBoletim();
     }
+});
+
+// Transição imagem notícia
+
+document.addEventListener("DOMContentLoaded", () => {
+    const image = document.getElementById("image-transition");
+    const images = [
+        "src/imgs/noticia_03.1.png",
+        "src/imgs/noticia_03.2.png"
+    ];
+    let currentIndex = 0;
+
+    setInterval(() => {
+        // Atualiza o índice da imagem
+        currentIndex = (currentIndex + 1) % images.length;
+
+        // Aplica a classe "hidden" para a transição de opacidade
+        image.classList.add("hidden");
+
+        // Aguarda a transição para trocar a imagem
+        setTimeout(() => {
+            image.src = images[currentIndex];
+            image.classList.remove("hidden");
+        }, 1000); // Aguarda 1s para completar a transição
+    }, 7000); // Troca a cada 5 segundos
 });

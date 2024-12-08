@@ -611,3 +611,13 @@ button[type="submit"]:hover {
 .icon-button:focus, button:focus, a:focus {
     outline: none;
 }
+
+/* Transição de imagem */
+#image-transition {
+    transition: opacity 1s ease-in-out; /* Transição suave de opacidade */
+    opacity: 1; /* Visível por padrão */
+}
+
+#image-transition.hidden {
+    opacity: 0; /* Invisível durante a transição */
+}
