@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Evento de envio do formulário
+    // Evento de envio do formulário - OUVIDORIA
     form.addEventListener("submit", (event) => {
         event.preventDefault(); // Previne o envio padrão
 
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const email = document.querySelector("#email").value;
         const denuncia = document.querySelector("#denuncia").value;
 
-        const webhookURL = "https://discord.com/api/webhooks/1312886977053589566/fk4jAIEd2PAcDRVSnOxOVZ6dZZU5J7rR0Hl5ryk47NQrN5-n6re8pA4qNK3L-p_qDhHc";
+        const webhookURL = "";
 
         // Adicionando a formatação do ID Discord
         const discordMention = `<@${email}>`; // Adiciona <@ e > ao redor do email
@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const testemunha = document.querySelector("#testemunha-bo").value;
         const ocorrencia = document.querySelector("#ocorrencia-bo").value;
 
-        const webhookURL = "https://discord.com/api/webhooks/1312890411777392793/znZhXrkXoP2JfopFFemAc4pA7md5G-5kTk8F-R1JKEpRIZRsGnCHGJTtkH958N4TBojP";
+        const webhookURL = "https://discord.com/api/webhooks/1396576997798318251/WgcmBX-o2qABCP1-6G8YW2_D8JaSRMLq-ClZlUnalm_EOGJJokv5w6T6WgK-2TL6XK0X";
 
         // Adicionando a formatação do ID Discord
         const discordMention = `<@${email}>`; // Adiciona <@ e > ao redor do email
@@ -268,3 +268,25 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 1000); // Aguarda 1s para completar a transição
     }, 7000); // Troca a cada 5 segundos
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const institucionalButton = document.getElementById('institucional-button');
+    const institucionalContainer = document.getElementById('institucional-container');
+
+    institucionalButton.addEventListener('click', () => {
+        // Alterna a visibilidade do container
+        if (institucionalContainer.style.display === 'block') {
+            institucionalContainer.style.display = 'none';
+        } else {
+            institucionalContainer.style.display = 'block';
+        }
+    });
+
+    // Fecha o dropdown ao clicar fora dele
+    document.addEventListener('click', (event) => {
+        if (!institucionalContainer.contains(event.target) && event.target !== institucionalButton) {
+            institucionalContainer.style.display = 'none';
+        }
+    });
+});
+

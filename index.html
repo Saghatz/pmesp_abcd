@@ -32,7 +32,16 @@
             </div>
             <nav class="main-menu">
                 <ul>
-                    <li><a href="#Institucional">Institucional</a></li>
+                    <li>
+                        <a href="javascript:void(0);" id="institucional-button">Institucional</a>
+                        <div id="institucional-container" class="new-dropdown-container">
+                            <ul id="institucional-list">
+                                <li><a href="EM DESENVOLVIMENTO">Capacitação e Treinamento</a></li>
+                                <li><a href="EM DESENVOLVIMENTO">Comandante Geral</a></li>
+                                <li><a href="https://saghatz.github.io/Calculadora_Penal_ABCD/index.html">Calculadora Penal</a></li>
+                            </ul>
+                        </div>
+                    </li>                                   
                     <li><a href="#noticias">Notícias</a></li>
                     <li><a href="#vídeos">Vídeos</a></li>
                     <li><a href="https://saghatz.github.io/concursos_pmesp/">Concursos</a></li>
@@ -51,7 +60,7 @@
 
     <div class="banner">
         <div class="banner-container">
-            <img src="./src/img_cabecalho/img01.jpeg" alt="Banner 1">
+            <img src="./src/img_cabecalho/img01.jpg" alt="Banner 1">
             <img src="./src/img_cabecalho/img02.jpeg" alt="Banner 2">
             <img src="./src/img_cabecalho/img03.jpg" alt="Banner 3">
         </div>
@@ -64,10 +73,10 @@
     <!-- Botões abaixo do banner -->
     <div class="icon-buttons-container">
         <div class="icon-buttons">
-            <button class="icon-button" onclick="openOuvidoria()">
+            <a href="https://docs.google.com/forms/d/1brsvN8eB-7NyZSnrCIZpVOfx0rZ-Cp5H8Mw2if8ZObo/viewform?edit_requested=true" target="_blank" class="icon-button" style="text-decoration: none;">
                 <img src="src/imgs/icone01.png" alt="Ícone 1">
                 <p class="button-text"><b>Ouvidoria</b></p>
-            </button>
+            </a>
             <button class="icon-button" onclick="openBoletim()">
                 <img src="src/imgs/icone02.png" alt="Ícone 2">
                 <p class="button-text"><b>Boletim de Ocorrência Eletrônico</b></p>
@@ -93,24 +102,24 @@
         <div class="image-container">
             <!-- Imagem vertical -->
             <div class="image-item vertical">
-                <img src="src/imgs/noticia_01.1.png" alt="Novo Uniforme PMESP">
+                <img src="src/imgs/noticia_01.1.png" alt="Noticias 01">
                 <div class="image-text">
-                    <p class="title-noticias">Integração ao suporte militar</p>
-                    <p class="description">Novos fardamentos são integrados ao batalhão da PMESP.</p>
+                    <p class="title-noticias">Bandidagem atrás das grades!</p>
+                    <p class="description">Índices de prisões aumentam consideravelmente na capital.</p>
                 </div>
             </div>
 
             <!-- Imagens empilhadas -->
             <div class="image-stack">
                 <div class="image-item">
-                    <img src="src/imgs/noticia_02.1.png" alt="Blitz UPA">
+                    <img src="src/imgs/noticia_02.1.png" alt="Noticias 02">
                     <div class="image-text">
                         <p class="title-noticias">Tropa de elite!</p>
-                        <p class="description">Novo batalhão do CHOQUE integra as forças militares de São Paulo ao comando do Capitão Erick.</p>
+                        <p class="description">Novos batalhões integram as forças militares de São Paulo.</p>
                     </div>
                 </div>
                 <div class="image-item">
-                    <img id="image-transition" src="src/imgs/noticia_03.1.png" alt="Rec EB">
+                    <img id="image-transition" src="src/imgs/noticia_03.1.png" alt="Noticias 03">
                     <div class="image-text">
                         <p class="title-noticias">O EB Continua verde!</p>
                         <p class="description">Recrutamento do Exército Brasileiro contou com uma quantidade significativa de novos recrutas.</p>
@@ -145,7 +154,7 @@
                     <iframe width="100%" height="250px" src="https://www.youtube.com/embed/ih2wHJDyjKM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="video-item">
-                    <iframe width="100%" height="250px" src="https://www.youtube.com/embed/XFW8FJUN8Tg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="100%" height="250px" src="https://www.youtube.com/embed/fHtTY4n6_GY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -180,7 +189,7 @@
                 <button type="submit">Enviar</button>
             </form>
         </div>
-    </div>
+    </div> 
 
     <!-- Container do formulário de Boletim de Ocorrência -->
     <div id="boletim-container" class="form-container">
@@ -228,7 +237,7 @@
 
     <!-- Rodapé -->
     <footer>
-        <p>&copy; 2024 Polícia Militar do Estado de São Paulo. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Polícia Militar do Estado de São Paulo - ABCD. Todos os direitos reservados.</p>
     </footer>
 
     <script src="js/script.js"></script>
