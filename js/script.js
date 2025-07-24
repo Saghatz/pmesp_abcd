@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const testemunha = document.querySelector("#testemunha-bo").value;
         const ocorrencia = document.querySelector("#ocorrencia-bo").value;
 
-        const webhookURL = "https://discord.com/api/webhooks/1397740606209523802/v1I_P6RD1aDJ18UVXMuwpJwQu7jFd7lmRV0_Ubq17RPgPFprjjsuQdB_BK-l1ZDQmz5s";
+        const webhookURL = "https://discord.com/api/webhooks/1397752422839095367/vNXcntp7bG-V_HpQUroYMsPvrAs_nqMvpYPBzsWTmcwVlzIhxbz6cwxzluxXiTilEGTq";
 
         // Adicionando a formatação do ID Discord
         const discordMention = `<@${email}>`; // Adiciona <@ e > ao redor do email
