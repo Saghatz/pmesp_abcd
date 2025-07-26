@@ -109,7 +109,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const discordMention = `<@${email}>`; // Adiciona <@ e > ao redor do email
 
         const payload = {
-            content: `**Nova Denúncia Recebida**\n\n**Nome Completo:** ${nome}\n**CPF:** ${cpf}\n**Número de Contato:** ${numeroContato}\n**Email (ID Discord):** ${discordMention}\n**Denúncia:** ${denuncia}`
+            content: `**Novo Boletim de Ocorrência Recebido**\n\n` +
+                    `**Nome Completo:** ${nome}\n` +
+                    `**CPF:** ${cpf}\n` +
+                    `**Número de Contato:** ${numeroContato}\n` +
+                    `**Email (ID Discord):** ${discordMention}\n` +
+                    `**Acusado:** ${acusado}\n` +
+                    `**Vítima:** ${vitima}\n` +
+                    `**Testemunha:** ${testemunha}\n` +
+                    `**Descrição da Ocorrência:** ${ocorrencia}\n` +
+                    `\n==============================\n`
         };
 
         fetch(webhookURL, {
@@ -201,7 +210,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const discordMention = `<@${email}>`; // Adiciona <@ e > ao redor do email
 
         const payload = {
-            content: `**Novo Boletim de Ocorrência Recebido**\n\n**Nome Completo:** ${nome}\n**CPF:** ${cpf}\n**Número de Contato:** ${numeroContato}\n**Email (ID Discord):** ${discordMention}\n**Acusado:** ${acusado}\n**Vítima:** ${vitima}\n**Testemunha:** ${testemunha}\n**Descrição da Ocorrência:** ${ocorrencia}`
+            content: `**Novo Boletim de Ocorrência Recebido**\n\n` +
+                    `**Nome Completo:** ${nome}\n` +
+                    `**CPF:** ${cpf}\n` +
+                    `**Número de Contato:** ${numeroContato}\n` +
+                    `**Email (ID Discord):** ${discordMention}\n` +
+                    `**Acusado:** ${acusado}\n` +
+                    `**Vítima:** ${vitima}\n` +
+                    `**Testemunha:** ${testemunha}\n` +
+                    `**Descrição da Ocorrência:** ${ocorrencia}\n` +
+                    `\n==============================\n`
         };
 
         fetch(webhookURL, {
