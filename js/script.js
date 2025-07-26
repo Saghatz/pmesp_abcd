@@ -290,3 +290,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Seleciona todos os campos que devem aceitar apenas números
+const camposNumericos = ["cpf-bo", "numero-contato-bo", "email-bo"];
+
+camposNumericos.forEach(id => {
+    const campo = document.getElementById(id);
+    if (campo) {
+        campo.addEventListener("input", function () {
+            this.value = this.value.replace(/\D/g, ""); // Remove tudo que não for número
+        });
+    }
+});

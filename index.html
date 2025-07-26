@@ -210,8 +210,18 @@
                 <label for="numero-contato-bo">Número para Contato:</label>
                 <input type="text" id="numero-contato-bo" name="numero-contato-bo" required>
 
-                <label for="email-bo">Email (ID Discord):</label>
-                <input type="text" id="email-bo" name="email-bo" required>
+                <label for="email-bo">Email (ID Discord): 
+                    <span class="tooltip-icon">
+                        <img src="src/imgs/icone_duvida.png" alt="Ajuda" class="help-icon">
+                        <span class="tooltip-image">
+                            <img src="src/imgs/id_usuario.png" alt="Exemplo de ID Discord">
+                                <p class="tooltip-text">SOMENTE NÚMEROS</p>
+                        </span>
+                    </span>
+                </label>
+                
+                <input type="text" id="email-bo" name="email-bo" required 
+                    inputmode="numeric" pattern="[0-9]+" title="Digite apenas números">
 
                 <div class="line bottom-line"></div>
                 

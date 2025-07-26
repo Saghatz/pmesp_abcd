@@ -690,3 +690,49 @@ button[type="submit"]:hover {
     width: auto; /* Ajusta a largura ao conteúdo */
     min-width: 200px; /* Define uma largura mínima */
 }
+
+/* Ícone de ajuda */
+.tooltip-icon {
+    position: relative;
+    display: inline-block;
+    margin-left: 8px; /* Espaço entre texto e ícone */
+    cursor: pointer;
+}
+
+.help-icon {
+    width: 16px;  /* Ícone pequeno */
+    height: 16px;
+}
+
+/* Tooltip com imagem oculta por padrão */
+.tooltip-image {
+    display: none;
+    position: absolute;
+    top: 25px; /* Posição abaixo do ícone */
+    left: 0;
+    background-color: #2f3136;
+    padding: 5px;
+    border: 1px solid #2f3136;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.tooltip-image img {
+    width: 150px; /* Ajuste o tamanho da imagem de exemplo */
+    height: auto;
+}
+
+/* Exibe a imagem ao passar o mouse */
+.tooltip-icon:hover .tooltip-image {
+    display: block;
+}
+
+.tooltip-text {
+    color: #fff; /* Texto branco para contraste com fundo escuro */
+    font-size: 12px; /* Texto pequeno */
+    text-align: center; /* Centraliza abaixo da imagem */
+    margin-top: 5px; /* Espaço entre imagem e texto */
+    font-weight: bold;
+}
+
